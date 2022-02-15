@@ -1,6 +1,7 @@
-package com.shadowlab.cursomc.service;
+package com.shadowlab.cursomc.services;
 
 import com.shadowlab.cursomc.domain.Categoria;
+import com.shadowlab.cursomc.services.exceptions.ObjectNotFoundException;
 import com.shadowlab.cursomc.repositories.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ public class CategoriaService {
 
     public Categoria buscar(Integer id) {
         Optional<Categoria> obj = categoriaRepository.findById(id);
-        return obj.orElse(null);
+        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
     }
 
 }

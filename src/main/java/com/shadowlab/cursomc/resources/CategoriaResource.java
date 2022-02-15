@@ -1,6 +1,6 @@
 package com.shadowlab.cursomc.resources;
 
-import com.shadowlab.cursomc.service.CategoriaService;
+import com.shadowlab.cursomc.services.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
