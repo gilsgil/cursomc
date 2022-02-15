@@ -1,8 +1,5 @@
 package com.shadowlab.cursomc.resources;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.shadowlab.cursomc.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
